@@ -1,6 +1,74 @@
+<!DOCTYPE html>
 <html>
+    <head>
+      <style> 
+       div{
+            border: 2px solid black;
+            /* height: 100px */
+            padding: 10px;
+
+       }
+       section{
+            border: 2px solid blue;
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 200px 200px;
+       }
+
+        #locations{
+            grid-row: span 2;
+       }
+
+       
+    </style>
+
+    </head>
+    <body>
+     <section>
+        <div id="locations"> 
+            <ul>
+                <li id="PortLouis">Port Louis</li>
+                <li id="Curepipe">Curepipe</li>
+                <li id="QuatreBornes">Quatre Bornes</li>
+                <li id="Flacq">Flacq</li>
+            </ul>
+        </div>
+        <div id="map"> 
+            <h1>Map</h1>
+        </div>
+        <div id="info"> 
+            <h1>Info</h1>
+            <h2 id="selected">You have selected Port Louis </h2>
+        </div>
+
+     </section>
+
+    <script>
+        let PortLouis = document.querySelector ("#PortLouis");
+        PortLouis.addEventListener("click",() =>{
+        console.log("You have selected Port Louis");
+        });
+
+        let Curepipe = document.querySelector ("#Curepipe");
+        Curepipe.addEventListener("click",() =>{
+        console.log("You have selected Curepipe");
+        });
+        
+        let QuatreBornes = document.querySelector ("#QuatreBornes");
+        QuatreBornes.addEventListener("click",() =>{
+        console.log("You have selected Quatre Bornes");
+        });
+
+        let Flacq = document.querySelector ("#Flacq");
+        Flacq.addEventListener("click",() =>{
+        console.log("You have selected Flacq");  
+        });
 
 
 
-
+        
+    </script>
+       
+    </body>
+    
 </html>
