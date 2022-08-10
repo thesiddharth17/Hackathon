@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+            integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+            crossorigin=""/>
       <style> 
        div{
             border: 2px solid black;
@@ -47,28 +50,45 @@
         let PortLouis = document.querySelector ("#PortLouis");
         PortLouis.addEventListener("click",() =>{
         console.log("You have selected Port Louis");
-        });
+        map.setView([-20.1637242,57.5010001],13)
+        var polygon = L.polygon([
+                [-20.1634189, 57.5009521 ],
+                [-20.1651108, 57.495062 ],
+                [ -20.1644461, 57.5082263 ]
+                
+                 ]).addTo(map)
+                    });
 
         let Curepipe = document.querySelector ("#Curepipe");
         Curepipe.addEventListener("click",() =>{
         console.log("You have selected Curepipe");
+        map.setView([-20.3158633,57.5203285],13)
         });
         
         let QuatreBornes = document.querySelector ("#QuatreBornes");
         QuatreBornes.addEventListener("click",() =>{
         console.log("You have selected Quatre Bornes");
+        map.setView([-20.2578547,57.4831073], 13)
         });
 
         let Flacq = document.querySelector ("#Flacq");
         Flacq.addEventListener("click",() =>{
         console.log("You have selected Flacq");  
-        });
-
-
-
-        
+        map.setView([-20.1929654,57.721028], 13)
+        });     
     </script>
-       
+
+         <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+    </script>
     </body>
     
 </html>
