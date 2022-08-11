@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="C:\Users\user\Desktop\Hackathon\Updating\css\style.css">
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
 </head>
 <body>
 
@@ -26,13 +28,11 @@
         <nav class="navbar">
             <a href="#home">home</a>
             <a href="#about">about</a>
-            <a href="#specials">specials</a>
-            <a href="#review">review</a>
             <a href="#location">location</a>
-            <a href="#book">book</a>
+            
         </nav>
 
-        <a href="#" class="btn">book a table</a>
+        <a href="#book" class="btn">book a table</a>
 
     </header>
 
@@ -45,11 +45,11 @@
 
             <div class="content">
                 <h3>Everyday is Noodle day</h3>
-                <a href="#" class="btn">locate us</a>
+                <a href="#location" class="btn">locate us</a>
             </div>
 
             <div class="image">
-                <img src="C:\Users\user\Desktop\Hackathon\Updating\image\kisspng-fried-noodles-chow-mein-peking-duck-chinese-cuisin-shrimp-and-vegetable-fried-noodles-5a9ac798004f52.6062589515200930800013.png" class="main-home-image" alt="">
+                <img src=".//image/kisspng-fried-noodles-chow-mein-peking-duck-chinese-cuisin-shrimp-and-vegetable-fried-noodles-5a9ac798004f52.6062589515200930800013.png" class="main-home-image" alt="">
             </div>
 
         </div>
@@ -60,113 +60,55 @@
     <!-- about section starts -->
     <section class="about" id="about">
 
-        <h1 class=" heading"> about us <span> Why choose us</span></h1>
+        <h1 class=" heading"> story <span> why choose us</span></h1>
+            <div class="row">
+             <div class="image">
+            <img src="./image/Profile.jpg" alt="">
+            </div>
 
+        <div class="content">
+            <h3 class="title">what makes our "mine bouille" special!</h3>
+            <p>Mauritius is an island nation, situated off the South East Coast of Africa known for its white sandy beaches and crystal clear waters, making it a popular travel destination for those seeking a tropical paradise. Welcome to our Mauritian kitchen where you will find authentic "mine bouille". </p>
+            <a href="#" class="btn">bon apetit!</a>
+            <div class="icons-container">
+                <div class="icons">
+                    <h3>quality "mine bouille"</h3>
+                </div>
+                <div class="icons">
+                    <h3>good service</h3>
+                </div>
+                <div class="icons">
+                    <h3>nationwide</h3>
+                </div>
+            </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
     </section>
-
-
-
-
-
-
-
     <!-- about section ends -->
-    <!-- special section starts -->
-    <section class="special" id="special">
-
-        <h1 class=" heading"> special <span> discounts</span></h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </section>
-
-
-
-
-
-
-
-    <!-- special section ends -->
-    <!-- review section starts -->
-    <section class="review" id="review">
-
-        <h1 class=" heading"> customer <span> reviews</span></h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </section>
-
-
-
-
-
-
-
-    <!-- review section ends -->
     <!-- location section starts -->
     <section class="location" id="location">
 
         <h1 class=" heading"> find us <span> here</span></h1>
 
-
-
-
-
-
-
-
-
-
-
+        <section class="mapsection">
+            <div id="location1">
+                <button type="button" class="btn" id="PortLouis">Port Louis</button>
+                <button type="button" class="btn" id="Curepipe">Curepipe</button>
+                <button type="button" class="btn" id="QuatreBornes">Quatre Bornes</button>
+                <button type="button" class="btn" id="Moka">Moka</button>
+                <button type="button" class="btn" id="Grand-Baie">Grand-Baie</button>
+            </div>
+        <div id="map">
+            <h1>Map</h1>
+        </div>
+     </section>
 
 
 
 
     </section>
-
-
-
-
-
-
 
     <!-- review section ends -->
     <!-- book section starts  -->
@@ -177,9 +119,9 @@
 
         <form action="">
 
-            <input type="text" placeholder="your name" class="box">
-            <input type="email" placeholder="your email" class="box">
-            <input type="number" placeholder="your number" class="box">
+            <input type="text" placeholder="Your name" class="box">
+            <input type="email" placeholder="Your email" class="box">
+            <input type="number" placeholder="Your number" class="box">
 
             <textarea name="" placeholder="your message" class="box" id="" cols="30" rows="10"></textarea>
 
@@ -209,8 +151,6 @@
                 <h3>quick links</h3>
                 <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> about </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> specials </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> review </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> location </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> book </a>
             </div>
@@ -234,5 +174,160 @@
     <!-- custom js file link  -->
     <script src="script.js"></script>
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
+    <script>
+
+        let restaurants = { 
+            "portlouis":[{name: "Le Pain Maison",
+                        opening_hours: "11.00-14.00",
+                        x : -20.158903567478365,
+                        y : 57.506176138596125,
+                        image:"image/le pain maison port louis.jpg"},  //contain array of 2 objects
+
+                        {name: "Ti-Tonton",
+                        opening_hours: "11.00-14.00",
+                        x: -20.1546740005888,
+                        y : 57.506886684227396,
+                        image:"image/ti tonton port louis.jpg"}],
+            
+
+            "Curepipe":[{name:"pekinois",
+                        opening_hours: "11.00-14.00",
+                        x :-20.317323358912578, 
+                        y : 57.52318817113881,
+                        image:"image/pekinois curepipe.jpg"}],
+
+                   
+            "Quatre bornes":[{name:"ajay snack",
+                        opening_hours: "11.00-14.00",
+                        x :-20.27518531302544, 
+                        y : 57.47301186926144,
+                        image:"image/ajay snack quatre bornes.jpg"},
+
+                        {name: "taste of mamou",
+                        opening_hours: "11.00-14.00",
+                        x : -20.272287452477904, 
+                        y : 57.47157491344104,
+                        image:"image/taste of mamou quatre bornes.jpg"}],
+
+            "Moka":[{name:"Payo",
+                        opening_hours: "11.00-14.00",
+                        x :-20.229635438179976, 
+                        y : 57.497970282752945,
+                        image:"image/payo moka.jpg"},
+
+                        {name: "Bol5",
+                        opening_hours: "11.00-14.00",
+                        x : -20.224112669560107, 
+                        y : 57.53666657111222,
+                        image:"image/bol 5 st pierre moka.jpg"}],
+
+            "Grandbaie":[{name:"ti-kouloir",
+                        opening_hours: "11.00-14.00",
+                        x :-20.014463126453425, 
+                        y : 7.584042384601126,
+                        image:"image/ti-kouloir grandbaie.jpg"},
+
+                        {name: "yesFood",
+                        opening_hours: "11.00-14.00",
+                        x: -20.019827517505956, 
+                        y : 57.58096306925734,
+                        image:"image/yes food grand baie.jpg"}],
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        let PortLouis = document.querySelector ("#PortLouis");
+        PortLouis.addEventListener("click",() =>{
+        console.log("You have selected Port Louis");
+        map.setView([-20.1637242,57.5010001],13)
+        });
+       
+        let Curepipe = document.querySelector ("#Curepipe");
+        Curepipe.addEventListener("click",() =>{
+        console.log("You have selected Curepipe");
+        map.setView([-20.3158633,57.5203285],13)
+        });
+
+        let QuatreBornes = document.querySelector ("#QuatreBornes");
+        QuatreBornes.addEventListener("click",() =>{
+        console.log("You have selected Quatre Bornes");
+        map.setView([-20.2578547,57.4831073], 13)
+        });
+
+        let Grand_Baie = document.querySelector ("#Grand-Baie");
+        Grand_Baie.addEventListener("click",() =>{
+        console.log("You have selected Grand-Baie ");
+        map.setView([-20.00625051526376, 57.58490595326518], 13)
+        });
+
+        let Moka = document.querySelector ("#Moka");
+        Moka.addEventListener("click",() =>{
+        console.log("You have selected Moka ");
+        map.setView([-20.219672809493268, 57.50145148567498], 13)
+        });
+
+     
+
+    </script>
+
+
+    <script>
+        var map = L.map('map').setView([-20.1637242,57.5010001], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+
+
+    map.setView([-20.1637242,57.5010001],13)
+
+        for (restaurant of restaurants["portlouis"]) {
+           
+            lepainmaison = "<h1>le Pain Maison</h1> <img src= 'image/le pain maison port louis.jpg' width=100 height=100>"
+            L.marker([restaurant.x, restaurant.y ]).addTo(map).bindPopup(lepainmaison).openPopup();
+            titonton = "<h1>Ti Tonton Port louis</h1> <img src= 'image/ti tonton port louis.jpg' width=100 height=100>"
+            L.marker([restaurant.portlouis[1].x, restaurant.portlouis[1].y]).addTo(map).bindPopup(titonton).openPopup();
+            
+        }
+        
+        for (restaurant of restaurants["Curepipe"]) {
+           
+            pekinois = "<h1>Pekinois </h1> <img src= restaurant.image width=100 height=100>"
+          L.marker([restaurant.Curepipe[1].x,restaurant.Curepipe[1].y ]).addTo(map).bindPopup(pekinois).openPopup();
+           
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <script src="script.js"> </script>
 </body>
 </html>
