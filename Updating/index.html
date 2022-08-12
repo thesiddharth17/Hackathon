@@ -29,6 +29,7 @@
             <a href="#home">home</a>
             <a href="#about">about</a>
             <a href="#location">location</a>
+            <a href="#review">review</a>
             
         </nav>
 
@@ -110,7 +111,32 @@
 
     </section>
 
-    <!-- review section ends -->
+    <!-- location section ends -->
+    <!-- reviews section starts -->
+    <section class="review" id="review">
+        <h1 class="heading"> reviews <span>what people says</span> </h1>
+        <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-quote-right"></i>
+                    <!-- <img src="image/pic-1.png" alt=""> -->
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>I am extremely pleased with the service that "Mi-Bwi" is offering as it help us to locate the best restaurant for "mine-bouille".</p>
+                    <h3>Gordon Ramsay</h3>
+                    <span>satisfied client</span>
+                </div>
+            </div>
+              <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- reviews section ends -->
     <!-- book section starts  -->
 
     <section class="book" id="book">
@@ -149,10 +175,10 @@
 
             <div class="box">
                 <h3>quick links</h3>
-                <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> about </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> location </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> book </a>
+                <a href="#home"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="#about"> <i class="fas fa-arrow-right"></i> about </a>
+                <a href="#location"> <i class="fas fa-arrow-right"></i> location </a>
+                <a href="#book"> <i class="fas fa-arrow-right"></i> book </a>
             </div>
 
             <div class="box">
@@ -197,7 +223,7 @@
 
             "Curepipe":[{name:"pekinois",
                         opening_hours: "11.00-14.00",
-                        x :-20.317323358912578, 
+                        x :-20.317323358912578,                         //one object
                         y : 57.52318817113881,
                         image:"image/pekinois curepipe.jpg"}],
 
@@ -229,7 +255,7 @@
             "Grandbaie":[{name:"ti-kouloir",
                         opening_hours: "11.00-14.00",
                         x :-20.014463126453425, 
-                        y : 7.584042384601126,
+                        y : 57.584042384601126,
                         image:"image/ti-kouloir grandbaie.jpg"},
 
                         {name: "yesFood",
@@ -297,21 +323,25 @@
     map.setView([-20.1637242,57.5010001],13)
 
         for (restaurant of restaurants["portlouis"]) {
-           
-            lepainmaison = "<h1>le Pain Maison</h1> <img src= 'image/le pain maison port louis.jpg' width=100 height=100>"
-            L.marker([restaurant.x, restaurant.y ]).addTo(map).bindPopup(lepainmaison).openPopup();
-            titonton = "<h1>Ti Tonton Port louis</h1> <img src= 'image/ti tonton port louis.jpg' width=100 height=100>"
-            L.marker([restaurant.portlouis[1].x, restaurant.portlouis[1].y]).addTo(map).bindPopup(titonton).openPopup();
-            
-        }
-        
+                lepainmaison = "<h1>"+restaurant.name+"</h1> <h2>"+restaurant.opening_hours+"</h2> <img src='"+restaurant.image+"' width=100 height=100>"
+                L.marker([restaurant.x, restaurant.y ]).addTo(map).bindPopup(lepainmaison).openPopup();
+            }
         for (restaurant of restaurants["Curepipe"]) {
-           
-            pekinois = "<h1>Pekinois </h1> <img src= restaurant.image width=100 height=100>"
-          L.marker([restaurant.Curepipe[1].x,restaurant.Curepipe[1].y ]).addTo(map).bindPopup(pekinois).openPopup();
-           
-       }
-
+            pekinois = "<h1>"+restaurant.name+"</h1> <h2>"+restaurant.opening_hours+"</h2> <img src='"+restaurant.image+"'width=100 height=100>"
+             L.marker([restaurant.x,restaurant.y]).addTo(map).bindPopup(pekinois).openPopup();
+         }
+         for (restaurant of restaurants["Quatre bornes"]) {
+            pekinois = "<h1>"+restaurant.name+"</h1> <h2>"+restaurant.opening_hours+"</h2> <img src='"+restaurant.image+"'width=100 height=100>"
+             L.marker([restaurant.x,restaurant.y]).addTo(map).bindPopup(pekinois).openPopup();
+         }
+         for (restaurant of restaurants["Moka"]) {
+            pekinois = "<h1>"+restaurant.name+"</h1> <h2>"+restaurant.opening_hours+"</h2> <img src='"+restaurant.image+"'width=100 height=100>"
+             L.marker([restaurant.x,restaurant.y]).addTo(map).bindPopup(pekinois).openPopup();
+         }
+         for (restaurant of restaurants["Grandbaie"]) {
+            pekinois = "<h1>"+restaurant.name+"</h1> <h2>"+restaurant.opening_hours+"</h2> <img src='"+restaurant.image+"'width=100 height=100>"
+             L.marker([restaurant.x,restaurant.y]).addTo(map).bindPopup(pekinois).openPopup();
+         }
 
 
 
